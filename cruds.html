@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel="stylesheet" href="./cruds1.css">
+     <link rel="icon" href="img/todo.gif" type="image/gif">
+     <title>Cruds</title>
+ </head>
+ <body>
+    <div class="Cruds">
+           <div class="head">
+            <div class="center">
+              <h2>CRUD</h2>
+              <img src="./img/7692809.png"/>
+            </div>
+              <h3> Create Add To List Update Delete Product </h3>
+            </div>
+    <!--  start div contains inputs -->
+            <div class="input">
+                   <input id="title"type="text"placeholder="title">
+                   <div class="price">
+                        <input id="price"type="number"placeholder="price"onkeyup="gettotal()">
+                        <input id="taxes"type="number"placeholder="taxes"onkeyup="gettotal()">
+                        <input id="ads"type="number"placeholder="ads"onkeyup="gettotal()">
+                        <input id="discount"type="number"placeholder="discount"onkeyup="gettotal()">
+                        <small id="total"></small>
+                    </div>
+
+                    <input type="number"placeholder="count"id="counts">
+                    <input type="text"placeholder="Category"id="categorys">
+                    <button id="createsubmit">Create</button>
+
+                   <div id="clearAll">  
+                   </div>
+                   <input class="search"type="text"placeholder="search"id="search" onkeyup="searchData(this.value)">
+
+                   <div class="searchbtn">
+                       <button id="searchTitle"onclick="getsearchmood(this.id)"> search title</button>
+                       <button id="searchCategory"onclick="getsearchmood(this.id)"> search category</button>
+                   </div>
+             </div>
+    <!--   end div contains input -->
+      <!--   start div contains output table -->
+          <div class="output">
+              <table id="tabless">
+                <tr>
+                  <th>id</th>
+                  <th>title</th>
+                  <th>price</th>
+                  <th>taxes</th>
+                  <th>ids</th>
+                  <th>discount</th>
+                  <th>total</th>
+                  <th>category</th>
+                  <th >update</th>
+                  <th>delete</th>
+                </tr>
+
+                 <tbody id="tbody">
+                </tbody>
+             </table>        
+        </div>
+         <!--   end div contains output table -->
+        
+    </div>
+     <div class="copyright">
+       <p>Copy right  2023 @Tamer Mohamed</p>
+     </div>
+    <button id="backToTop" onclick="scroltop()"><img class="topimg" src="./img/top.png"/></button>
+</body>
+<script type="text/javascript" src="./Cruds.js">
+ </script>
+ </html>
